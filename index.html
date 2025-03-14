@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=https://www.formula1.com/en/racing/2025">
     <title>Redirecting...</title>
+    <script>
+        // Pega o ano atual
+        const currentYear = new Date().getFullYear();
+        // Monta a URL com o ano
+        const targetURL = `https://www.formula1.com/en/racing/${currentYear}`;
+        // Faz o redirecionamento
+        window.location.href = targetURL;
+    </script>
 </head>
 <body>
-    <p>If you are not redirected, <a href="https://www.formula1.com/en/racing/2025">click here</a>.</p>
+    <p>If you are not redirected, <a id="manual-link" href="#">click here</a>.</p>
+    <script>
+        // Atualiza o link manual para o caso de falha no redirecionamento
+        document.getElementById("manual-link").href = targetURL;
+    </script>
 </body>
 </html>
